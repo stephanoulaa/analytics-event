@@ -1,9 +1,32 @@
-#cheese-pizza {
-    height: 50%;
-    width: 50%;
+body {
+    background-color: coral;
+    margin: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#swiss {
+    height: 30%;
+    width: 30%;
+    float: left;
 }
 
 #cheese-platter {
-    height: 50%;
-    width: 50%;
+    height: 30%;
+    width: 30%;
+    float: right;
 }
+
+.button {
+    float: right;
+    padding: 15px;
+    background-color: hotpink;
+    border-radius: 45%;
+}
+
+#grilled {
+    height: 30%;
+    width: 30%;
+    float: left;
+}
+
