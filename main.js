@@ -102,6 +102,8 @@ $(document).ready(function() {
         //return scrollPercentMax at the end
         console.log('Highest percent of page user scrolled to: ' + scrollPercentMax);
         console.log('Total Time Hovered Over H1\'s: ' + totalHoverTimeH1 );
+        console.log('Total Time Hovered Over P\'s: ' + totalHoverTimeP );
+        console.log('Total Time Hovered Over IMG\'s: ' + totalHoverTimeIMG );
     });
     
     //If they left the page by clicking a link, record which link they clicked. 
