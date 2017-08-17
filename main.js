@@ -35,65 +35,56 @@ $(document).ready(function() {
     
     console.log("Time Spent Hovering Over Each Element:");
     console.log("For the Header:");
+    $(window).on('click', function() {
+        
+        
+    //var totalHoverTimeH1 = headingIn - headingOut;
+    //console.log('Total Time spent hovering over h1: ' + totalHoverTimeH1);
+        
+        
+    })
+    
+    var headingIn;
+    var headingOut;
     $('h1').on('mouseover', function(event) {
-        var headingIn = event.timeStamp
+        headingIn = event.timeStamp
         console.log('Mouse enters the heading at: ' + headingIn)
     });
     
     $('h1').on('mouseleave', function(event) {
-        var headingOut = event.timeStamp
+        headingOut = event.timeStamp
         console.log('Mouse leaves the heading at: ' + headingOut)
     });
+    var totalHoverTimeH1 = headingIn - headingOut;
     
+    var paragraphIn;
     console.log("For the Paragraphs:");
     $('p').on('mouseover', function(event) {
-        var paragraphIn = event.timeStamp
+        paragraphIn = event.timeStamp
         console.log('Mouse enters the paragraph at: ' + paragraphIn )
     });
     
+    var paragraphOut;
     $('p').on('mouseleave', function(event) {
-        var paragraphOut = event.timeStamp
+        paragraphOut = event.timeStamp
         console.log('Mouse leaves the paragraph at: ' + paragraphOut)
     });
+    var totalHoverTimeP = paragraphIn - paragraphOut;
   
-    console.log("For Image 3:");
-    //image3
-    $('#grilled').on('mouseover', function(event) {
-        var imageIn = event.timeStamp
+    var imageIn;
+    console.log("For All Images:");
+    $('.images').on('mouseover', function(event) {
+        imageIn = event.timeStamp
         console.log('Mouse enters the image at: ' + imageIn)
     });
     
-    //image3
-    $('#grilled').on('mouseleave', function(event) {
-        var imageOut = event.timeStamp
+    var imageOut;
+    $('.images').on('mouseleave', function(event) {
+        imageOut = event.timeStamp
         console.log('Mouse leaves the image at: ' + imageOut)
     });
+    var totalHoverTimeIMG = imageIn - imageOut;
     
-    console.log("For Image 2:");
-    //image2
-    $('#cheese-platter').on('mouseleave', function(event) {
-        var imageIn = event.timeStamp
-        console.log('Mouse leaves the image at: ' + imageIn)
-    });
-    
-    //image2
-    $('#cheese-platter').on('mouseleave', function(event) {
-        var imageOut = event.timeStamp
-        console.log('Mouse leaves the image at: ' + imageOut)
-    });
-    
-    console.log("For Image 1:");
-    //image1
-    $('#swiss').on('mouseleave', function(event) {
-        var imageIn = event.timeStamp
-        console.log('Mouse leaves the image at: ' + imageIn)
-    });
-    
-    //image1
-    $('#swiss').on('mouseleave', function(event) {
-        var imageOut = event.timeStamp
-        console.log('Mouse leaves the image at: ' + imageOut)
-    });
   
     console.log("Time Spent Hovering Over Button, And Which One User Clicked On:");
     $('.button').on('click', function(event) {
@@ -110,6 +101,7 @@ $(document).ready(function() {
         console.log('Number of vowels typed: ' + vowelCounter);
         //return scrollPercentMax at the end
         console.log('Highest percent of page user scrolled to: ' + scrollPercentMax);
+        console.log('Total Time Hovered Over H1\'s: ' + totalHoverTimeH1 );
     });
     
     //If they left the page by clicking a link, record which link they clicked. 
